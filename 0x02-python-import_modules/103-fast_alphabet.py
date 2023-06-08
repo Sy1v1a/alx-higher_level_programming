@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 str1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-print(str1)
+print("{}".format(str1), end='\n')
