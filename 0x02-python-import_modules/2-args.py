@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from sys import argv
-    ag = len(argv) - 1
+    import sys
+    ag = len(sys.argv) - 1
     if ag == 1:
         print("1 argument:")
     elif ag == 0:
@@ -9,4 +9,4 @@ if __name__ == "__main__":
     else:
         print("{} arguments:".format(ag))
         for i in range(ag):
-            print("{}: {}".format(i + 1, argv[i + 1]))
+            print("{}: {}".format(i + 1, sys.argv[i + 1]))
