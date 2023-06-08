@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-import hidden_4
-j = dir(hidden_4)
-sortt = sorted(name for name in j if not name.startswith('__') )
-for name in sortt:
-    print(name)
+if __name__ == "__main__":
+    import hidden_4
+    j = dir(hidden_4)
+    for name in j:
+        if name[:2] != "__":
+            print(name)
