@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
+    lent = len(sys.argv)
     sum1 = 0
-    for i in range(len(sys.argv) - 1):
-        sum1 += int(sys.argv[i + 1])
-        print("{}".format(sum1))
+    if lent == 1:
+        sum1 = 0
+    else:
+        for i in range(1, lent):
+            sum1 += int(sys.argv[i])
+    print("{:d}".format(sum1))
