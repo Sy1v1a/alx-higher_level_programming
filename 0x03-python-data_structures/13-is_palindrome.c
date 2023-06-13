@@ -10,15 +10,18 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *one, *last, *mid;
 	size_t lent = 0, i;
-	if(*head == NULL || (*head)->next ==NULL)
+
+	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 	one = *head;
-	while(one)
+
+	while (one)
 	{
 		lent++;
 		one = one->next;
 	}
 	one = *head;
+
 	for (i = 0; i < (lent / 2) - 1; i++)
 		one = one->next;
 	if ((lent % 2) == 0 && one->n != one->next->n)

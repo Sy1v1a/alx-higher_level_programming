@@ -1,4 +1,0 @@
-#include "lists.h"
-/**
-is_palindrome - a function to check if list is palindrome
-@head
