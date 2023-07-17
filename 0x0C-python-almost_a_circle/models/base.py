@@ -8,6 +8,7 @@ import turtle
 class Base:
     """Reps class Base"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """Args:
             id: empty para..."""
@@ -19,25 +20,31 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """Convert to json str"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Save file to json"""
         filename = cls.__name__ + ".json"
-        json_string = cls.to_json_string([obj.to_dictionary() for obj in list_objs]) if list_objs is not None else "[]"
+        json_string = cls.to_json_string\
+            ([obj.to_dictionary() for obj in list_objs]) \
+            if list_objs is not None else "[]"
         with open(filename, 'w') as file:
             file.write(json_string)
 
     @staticmethod
     def from_json_string(json_string):
+        """Import fron json"""
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """Create cls file"""
         if cls.__name__ == "Rectangle":
             ex_instance = cls(1, 1)
         elif cls.__name__ == "Square":
@@ -50,6 +57,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """Load from cls to json"""
         filename = cls.__name__ + ".json"
 
         try:
@@ -64,6 +72,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """Save to csv"""
         filename = cls.__name__ + ".csv"
         fieldnames = cls.get_fieldnames()
 
@@ -75,6 +84,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
+        """Load fron cls to csv"""
         filename = cls.__name__ + ".csv"
         exinstance = []
 
@@ -87,10 +97,12 @@ class Base:
 
     @staticmethod
     def get_fieldnames():
+        """Get file names"""
         return ["id", "width", "height", "x", "y"]
 
     @staticmethod
     def draw(list_rectangles, list_squares):
+        """Draw with the aid of turtle"""
         screen = turtle.Screen()
         screen.bgcolor("white")
         screen.title("Draw Rectangles and Squares")

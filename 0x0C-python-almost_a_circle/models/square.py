@@ -4,6 +4,7 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """Defines class square"""
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
 
@@ -17,6 +18,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """Arguments and keyword arguments"""
         if args:
             if len(args) >= 1:
                 self.id = args[0]
@@ -37,6 +39,7 @@ class Square(Rectangle):
                 self.y = kwargs['y']
 
     def to_dictionary(self):
+        """Keys and value"""
         return {
             'id': self.id,
             'size': self.size,
@@ -45,4 +48,5 @@ class Square(Rectangle):
         }
 
     def __str__(self):
+        """Defines str"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"

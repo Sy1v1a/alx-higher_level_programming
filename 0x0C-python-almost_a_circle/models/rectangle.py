@@ -65,15 +65,18 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """Defines area function"""
         return self.__width * self.__height
 
     def display(self):
+        """Display a set character"""
         for x in range(self.__y):
             print()
         for i in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
 
     def update(self, *args, **kwargs):
+        """Defines the arguments passed"""
         if len(args) > 0:
             self.id = args[0]
         if len(args) > 1:
@@ -90,9 +93,12 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        """Defines string"""
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} \
+            - {self.__width}/{self.__height}"
 
     def to_dictionary(self):
+        """Defines key and value"""
         return {
             'id': self.id,
             'width': self.width,
