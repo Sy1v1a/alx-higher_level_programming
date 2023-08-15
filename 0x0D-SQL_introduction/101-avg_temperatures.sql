@@ -1,3 +1,4 @@
+--display city and avg-temp
 SELECT city, AVG(value) AS avg_temp
 FROM temperatures
 GROUP BY city
