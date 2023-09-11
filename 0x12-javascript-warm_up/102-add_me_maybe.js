@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/node
 
 function addMeMaybe (number, theFunction) {
   number ++;
