@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
 function add(a, b) {
-
   if (typeof a !== 'number' || typeof b !== 'number') {
     console.log('Please provide valid integers as arguments.');
     return;
