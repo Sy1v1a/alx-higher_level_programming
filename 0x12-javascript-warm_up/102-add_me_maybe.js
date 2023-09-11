@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 function addMeMaybe (number, theFunction) {
-  number += 1;
+  number ++;
   theFunction(number);
 }
 
