@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-import urllib.request
-import urllib.parse
+"""
+    A script that takes in a URL
+"""
 import sys
+import urllib.parse
+import urllib.request
+
 
 if __name__ == "__main__":
     url = sys.argv[1]
