@@ -2,6 +2,7 @@
 import requests
 import sys
 
+
 if len(sys.argv) != 3:
     print("Usage: python 6-post_email.py <URL> <email>")
     sys.exit(1)
