@@ -9,7 +9,7 @@ if len(sys.argv) != 3:
 username = sys.argv[1]
 access_token = sys.argv[2]
 
-url = f"https://api.github.com/sy1v1a"
+url = f"https://api.github.com/user"
 
 headers = {
     'Authorization': f'Basic {username}:{access_token}'
