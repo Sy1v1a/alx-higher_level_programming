@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+import requests
+import sys
+
+if len(sys.argv) != 3:
+    print("Usage: python 6-post_email.py <URL> <email>")
+    sys.exit(1)
+
+url = sys.argv[1]
+email = sys.argv[2]
+
+data = {'email': email}
+
+try:
+    response = requests.post(url, data=data)
+    response.raise_for_status()  # Raise an exception for HTTP errors (4xx and 5xx status codes)
+
+    print("Your email is:", response.text)
+except requests.exceptions.RequestException as e:
+    print("Error sending POST request:", e)
