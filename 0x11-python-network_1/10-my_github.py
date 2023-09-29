@@ -11,7 +11,6 @@ access_token = sys.argv[2]
 
 url = f"https://api.github.com/sy1v1a"
 
-# Create a Basic Authentication header with your username and personal access token
 headers = {
     'Authorization': f'Basic {username}:{access_token}'
 }
