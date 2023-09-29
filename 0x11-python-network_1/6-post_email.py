@@ -13,7 +13,7 @@ data = {'email': email}
 
 try:
     response = requests.post(url, data=data)
-    response.raise_for_status()  # Raise an exception for HTTP errors (4xx and 5xx status codes)
+    response.raise_for_status()
 
     print("Your email is:", response.text)
 except requests.exceptions.RequestException as e:
