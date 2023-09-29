@@ -13,10 +13,9 @@ url = f"https://api.github.com/repos/{owner_name}/{repository_name}/commits"
 
 try:
     response = requests.get(url)
-    response.raise_for_status()  # Raise an exception for HTTP errors (4xx and 5xx status codes)
+    response.raise_for_status()
 
     commits = response.json()
-    
     # Print the 10 most recent commits
     for commit in commits[:10]:
         sha = commit['sha']
