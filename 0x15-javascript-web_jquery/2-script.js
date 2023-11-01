@@ -1,1 +1,1 @@
-document.querySelector("div #red-header").addEventListener.click.style("header", color="#ff0000");
+document.querySelector("div #red-header").onclick="document.querySelector('header').style.color='#ff0000';
